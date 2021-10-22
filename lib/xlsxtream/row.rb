@@ -16,8 +16,14 @@ module Xlsxtream
     TRUE_STRING = 'true'.freeze
     FALSE_STRING = 'false'.freeze
 
-    DATE_STYLE = 1
-    TIME_STYLE = 2
+    #
+    # DATE_STYLE = 1
+    # Zjištěno empiricky otevřením dokumentu ve Web Office, změnou formátu data v buňce a porovnáním s původní hodnotou.
+    #  * https://stackoverflow.com/a/46848257/16333151
+    #
+    DATE_STYLE = 3
+    # TIME_STYLE = 2
+    TIME_STYLE = 4
 
     def initialize(row, rownum, options = {})
       @row = row

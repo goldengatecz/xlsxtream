@@ -158,9 +158,10 @@ module Xlsxtream
       @io << XML.header
       @io << XML.strip(<<-XML)
         <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
-          <numFmts count="2">
+          <numFmts count="3">
             <numFmt numFmtId="164" formatCode="yyyy\\-mm\\-dd"/>
             <numFmt numFmtId="165" formatCode="yyyy\\-mm\\-dd hh:mm:ss"/>
+            <numFmt numFmtId="166" formatCode="d/m/yy\ h:mm;@"/>
           </numFmts>
           <fonts count="1">
             <font>
@@ -183,10 +184,12 @@ module Xlsxtream
           <cellStyleXfs count="1">
             <xf numFmtId="0" fontId="0" fillId="0" borderId="0"/>
           </cellStyleXfs>
-          <cellXfs count="3">
+          <cellXfs count="5">
             <xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
             <xf numFmtId="164" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
             <xf numFmtId="165" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+            <xf numFmtId="14" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
+            <xf numFmtId="166" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/>
           </cellXfs>
           <cellStyles count="1">
             <cellStyle name="Normal" xfId="0" builtinId="0"/>
